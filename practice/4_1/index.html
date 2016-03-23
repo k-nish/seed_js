@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>template</title>
+		<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div class="header-contents">
+			<h1>タイトル</h1>
+			<h2>サブタイトル</h2>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<section>
+				<form action="" id="form">
+					<input type="text" name="word">
+					<input type="submit" value="検索">
+				</form>
+				<p id="output"></p>
+			</section>
+		</div>
+		<footer>copyright NexSeed. All rights reserved.</footer>
+		<script type="text/javascript">
+			document.getElementById('form').onsubmit = function() {
+				// console.log('clickされました。');
+				var search = document.getElementById('form').word.value;
+				document.getElementById('output').textContent = search;
+				return false;
+			};
+		</script>
+	</body>
+</html>

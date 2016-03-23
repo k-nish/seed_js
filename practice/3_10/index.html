@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>template</title>
+		<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div class="header-contents">
+			<h1>タイトル</h1>
+			<h2>サブタイトル</h2>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<section>
+				<p id="output"></p>
+				<p id="output2"></p>
+				<p id="output3"></p>
+			</section>
+		</div>
+		<footer>copyright NexSeed. All rights reserved.</footer>
+		<script>
+			var tax = function(price){
+				price = price * 1.08;
+				return price;
+			};
+			//taxの定義をしているので閉じ括弧の後にセミコロンが必要
+
+			document.getElementById('output').textContent = '入力した金額の値段は、' + total(200);
+		</script>
+	</body>
+</html>

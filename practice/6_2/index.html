@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>template</title>
+		<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+		<style>
+			#box{
+				display: none;
+				margin: 0 auto 0 auto;
+				max-width: 960px;
+			}
+			#box ul{
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			#box li{
+				padding: 8px 0 8px 0;
+				color: #09b7ef;
+				border-bottom: 1px solid #ffffff;
+			}
+			.header-contents{
+				position: relative;
+			}
+			#box_btn {
+				position: absolute;
+				top: 0;
+				right: 0;
+				border-radius: 0 0 8px 8px;
+				padding: 6px 20px 6px 20px;
+				background-color: #ffffff;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li>aaa</li>
+				<li>bbb</li>
+			</ul>
+		</div>
+		<header>
+			<div class="header-contents">
+				<div id="box_btn">Menu</div>
+				<h1>タイトル</h1>
+				<h2>サブタイトル</h2>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<section>
+				
+			</section>
+		</div>
+		<footer>copyright NexSeed. All rights reserved.</footer>
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript">
+				$(function(){
+					$('#box_btn').on('click', function(){
+						$('#box').slideToggle(2000);
+					});
+				});
+		</script>
+	</body>
+</html>

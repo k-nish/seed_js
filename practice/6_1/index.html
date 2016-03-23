@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>template</title>
+		<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			.submenu h3{
+				font-size:16px;
+				cursor: pointer;
+				color: #09b7ef;
+			}
+			.submenu h3:hover{
+				color: #b04188;
+			}
+			.submenu ul{
+				list-style-type: none;
+				font-size: 14px;
+			}
+			.hidden{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header-contents">
+			<h1>タイトル</h1>
+			<h2>サブタイトル</h2>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<section>
+				<div class="sidebar">
+					<div class="submenu">
+						<h3>タイトル</h3>
+						<ul class="hidden">
+							<li>-概要</li>
+							<li>-ダウンロード</li>
+							<li>-インストール</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>copyright NexSeed. All rights reserved.</footer>
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script>
+			// $(document).ready(function(){}); 左のコードを省略すると下のコード
+			$(function(){
+				$('.submenu h3').on('click', function(){
+					$(this).next().toggleClass('hidden');
+				});
+			});
+		</script>
+	</body>
+</html>
