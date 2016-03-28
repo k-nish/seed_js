@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>template</title>
+		<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div class="header-contents">
+			<h1>タイトル</h1>
+			<h2>サブタイトル</h2>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<section>
+				
+			</section>
+		</div>
+		<footer>copyright NexSeed. All rights reserved.</footer>
+		<script>
+			// FizzBuzzを判定するファンクション
+			var fizzBuzz = function(num) {
+				if (num % 3 == 0 && num % 5 == 0) {
+					return 'FizzBuzz!';
+				} else if (num % 3 == 0) {
+					return 'Fizz!';
+				} else if (num % 5 == 0) {
+					return 'Buzz';
+				} else {
+					return num;
+				}
+			};
+			// 30回繰り返して結果をコンソールに出力する
+			for (var i = 1; i <= 30; i++) {
+				console.log(fizzBuzz(i));
+			}
+		</script>
+	</body>
+</html>

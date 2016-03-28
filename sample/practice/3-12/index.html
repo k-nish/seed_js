@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>template</title>
+		<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div class="header-contents">
+			<h1>タイトル</h1>
+			<h2>サブタイトル</h2>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<section>
+				<h1>やることリスト</h1>
+				<!-- ここに出力する -->
+				<ul id="list">
+				</ul>
+			</section>
+		</div>
+		<footer>copyright NexSeed. All rights reserved.</footer>
+		<script>
+			// JavaScriptの配列の書き方
+			var todo = ['宿題をする','アヤラへ買い物に行く','勉強会申し込み','部屋の掃除'];
+
+			// 配列への追加（pushメソッド：配列の最後にデータを追加する）
+			todo.push('歯医者に行く');
+
+			// 配列の各項目を全て読み取ってコンソールに出力する
+			for (var i = 0; i < todo.length; i++) {
+				// createElement: 指定したタグを作成するメソッド
+				// ここではliタグを作成する
+				var li = document.createElement('li');
+				// liタグのコンテンツに、配列のデータを指定する
+				li.textContent = todo[i];
+				// id属性がlistの要素、つまり<ul id="list">を取得し、子要素にliタグを挿入する
+				// appendChild: 取得した要素に、()のパラメータで指定した要素を子要素として挿入するプロパティ
+				document.getElementById('list').appendChild(li);
+			}
+		</script>
+	</body>
+</html>

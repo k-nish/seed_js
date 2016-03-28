@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>template</title>
+		<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div class="header-contents">
+			<h1>タイトル</h1>
+			<h2>サブタイトル</h2>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<section>
+				<h2>Greatist Hits - Chapter One(backstreet boys)</h2>
+				<div id="list"></div>
+			</section>
+		</div>
+		<footer>copyright NexSeed. All rights reserved.</footer>
+		<script>
+			// num: 加工する数値 digit: 整形する桁数
+			var addZero = function(num, digit) {
+				// 受け取ったnumを文字列（String）に変換
+				var numString = String(num);
+				// 先頭に0を付ける（digitで指定された桁数になるまで繰り返す）
+				while(numString.length < digit) {
+					numString = '0' + numString;
+				}
+				return numString;
+			};
+
+			// 表示するアルバム曲リスト
+			var songs = [
+				'I want it that way',
+				'Everybody',
+				'As Long As You Love Me',
+				'Show Me The Meaning of Being Lonely',
+				'Quit Playing Games(With My Heart)',
+				'We\'ve Got It Goin\' On',
+				'All I Have to Give',
+				'Larger Than Life',
+				'I\'ll Never Break Your Heart',
+				'The Call',
+				'Shape of My Heart',
+				'Get Down(You\'re the One For Me)',
+				'Anywhare for you',
+				'The One',
+				'More Than That',
+				'Drowing'
+			];
+
+			// 曲リストを繰り返す
+			for (var i = 0; i < songs.length; i++) {
+				// pタグを生成
+				var paragraph = document.createElement('p');
+				// pタグのコンテントに曲番号と曲名を設定
+				paragraph.textContent = addZero(i + 1, 2) + '. ' + songs[i];
+				// <div id="list">の子要素に、曲番号と曲名が含まれたpタグ要素を追加
+				document.getElementById('list').appendChild(paragraph);
+			}
+		</script>
+	</body>
+</html>

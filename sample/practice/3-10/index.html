@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>template</title>
+		<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div class="header-contents">
+			<h1>タイトル</h1>
+			<h2>サブタイトル</h2>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<section>
+				<!-- ここに税込み合計価格を表示する -->
+				<p id="output"></p>
+				<p id="output2"></p>
+				<p id="output3"></p>
+			</section>
+		</div>
+		<footer>copyright NexSeed. All rights reserved.</footer>
+		<script>
+			// 引数で渡された金額に、消費税8%を掛けた金額を返す関数
+			var total = function(price) {
+				var tax = 0.08;
+				return price + price * tax;
+			}
+
+			// <p id="output">の要素に、処理結果を出力する
+			document.getElementById('output').textContent = '入力した金額の値段は、' + total(8000) + '円（税込）です。';
+			document.getElementById('output2').textContent = '入力した金額の値段は、' + total(200) + '円（税込）です。';
+			document.getElementById('output3').textContent = '入力した金額の値段は、' + total(1000) + '円（税込）です。';
+		</script>
+	</body>
+</html>
